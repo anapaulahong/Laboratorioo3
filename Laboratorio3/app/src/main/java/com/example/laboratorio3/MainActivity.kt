@@ -3,6 +3,7 @@ package com.example.laboratorio3
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -11,11 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.laboratorio3.ui.theme.Laboratorio3Theme
+import androidx.compose.ui.graphics.Color
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) { //onCreate: entry point to the app and calls other functions to build the user interface
         super.onCreate(savedInstanceState)
-        setContent {
+        setContent { //define layout through composable functions
             Laboratorio3Theme {
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -32,7 +34,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Hi, my name is $name!",
         modifier = modifier
     )
 }
@@ -41,6 +43,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     Laboratorio3Theme {
-        Greeting("Android")
+        Surface(color = Color.Cyan) {
+            Greeting("Paula")
+        }
     }
 }
