@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.laboratorio3.ui.theme.Laboratorio3Theme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) { //onCreate: entry point to the app and calls other functions to build the user interface
@@ -34,8 +35,9 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hi, my name is $name!",
+        text = "$name",
         color = Color.Blue,
+        fontSize = 24.sp,
         modifier = modifier
     )
 }
@@ -45,7 +47,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun GreetingPreview() {
     Laboratorio3Theme {
         Surface(color = Color.Cyan) {
-            Greeting("Paula")
+            Greeting("Ana Paula Hong 22731" )
         }
     }
 }
