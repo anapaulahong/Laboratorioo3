@@ -35,6 +35,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hi, my name is $name!",
+        color = Color.Blue,
         modifier = modifier
     )
 }
